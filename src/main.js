@@ -6,8 +6,10 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 import router from './router'
+import VuePageTransition from 'vue-page-transition'
 
 Vue.use(BootstrapVue)
+Vue.use(VuePageTransition)
 
 Vue.config.productionTip = false
 
