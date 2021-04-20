@@ -31,7 +31,50 @@
         ></b-form-input>
       </b-form-group>
 
+      <b-form-group
+        id="input-group-1"
+        label="Course description:"
+        label-for="input-1"
+        description="We'll never share your email with anyone else."
+      >
+        <b-form-input
+          id="input-1"
+          v-model="course.description"
+          type="text"
+          placeholder="Enter description"
+          required
+        ></b-form-input>
+      </b-form-group>
 
+      <b-form-group
+        id="input-group-1"
+        label="Course points:"
+        label-for="input-1"
+        description="We'll never share your email with anyone else."
+      >
+        <b-form-input
+          id="input-1"
+          v-model="course.points"
+          type="text"
+          placeholder="Enter points"
+          required
+        ></b-form-input>
+      </b-form-group>
+
+      <b-form-group
+        id="input-group-1"
+        label="Course level:"
+        label-for="input-1"
+        description="We'll never share your email with anyone else."
+      >
+        <b-form-input
+          id="input-1"
+          v-model="course.level"
+          type="text"
+          placeholder="Enter level"
+          required
+        ></b-form-input>
+      </b-form-group>
 
 
 
@@ -80,7 +123,7 @@ import axios from 'axios';
         let id = this.$route.params.id;
 let token = localStorage.getItem('token');
         event.preventDefault()
-        axios.put('http://college.api:8000/api/courses' + id, {
+        axios.put('http://college.api:8000/api/courses/' + id, {
           title: this.course.title,
           code: this.course.code,
           description: this.course.description,
